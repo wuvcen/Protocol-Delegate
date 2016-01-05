@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YkA-IV-bDg">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Guess Number-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Protocol_Delegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No guess yet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JcZ-KK-g8M">
+                                <rect key="frame" x="20" y="128" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="VeF-7C-C0m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9BS-Zs-Qm4">
+                                <rect key="frame" x="20" y="213" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cfS-iL-4PC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tpD-3n-BWM">
+                                <rect key="frame" x="20" y="298" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jyS-2M-AVA"/>
+                                </constraints>
+                                <state key="normal" title="Guess random number"/>
+                                <connections>
+                                    <segue destination="skh-6C-s1R" kind="show" identifier="pushToInputView" id="OTq-NP-fUZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cG4-HO-3Il">
+                                <rect key="frame" x="20" y="392" width="560" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Mni-iN-fZO"/>
+                                </constraints>
+                                <state key="normal" title="Replay"/>
+                                <connections>
+                                    <action selector="replayAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SsY-p8-xIx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cG4-HO-3Il" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="652-Ax-zJn"/>
+                            <constraint firstItem="JcZ-KK-g8M" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="7Yg-QB-W0c"/>
+                            <constraint firstItem="JcZ-KK-g8M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ba9-mS-g6R"/>
+                            <constraint firstItem="JcZ-KK-g8M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="64" id="PRg-VH-lQm"/>
+                            <constraint firstItem="tpD-3n-BWM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="d85-8w-WqK"/>
+                            <constraint firstItem="9BS-Zs-Qm4" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="et4-aE-VhK"/>
+                            <constraint firstItem="tpD-3n-BWM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jQh-1l-PM4"/>
+                            <constraint firstItem="9BS-Zs-Qm4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="k3g-vV-dQR"/>
+                            <constraint firstItem="cG4-HO-3Il" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="lNn-ir-f4M"/>
+                            <constraint firstItem="tpD-3n-BWM" firstAttribute="top" secondItem="9BS-Zs-Qm4" secondAttribute="bottom" constant="64" id="pM5-cs-dln"/>
+                            <constraint firstItem="9BS-Zs-Qm4" firstAttribute="top" secondItem="JcZ-KK-g8M" secondAttribute="bottom" constant="64" id="rit-zw-7Fz"/>
+                            <constraint firstItem="cG4-HO-3Il" firstAttribute="top" secondItem="tpD-3n-BWM" secondAttribute="bottom" constant="64" id="z9G-MZ-uwP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Guess Number" id="4d8-bc-SGM"/>
+                    <connections>
+                        <outlet property="guessButtonOutlet" destination="tpD-3n-BWM" id="38Y-Y0-pex"/>
+                        <outlet property="outcomeLabelOutlet" destination="9BS-Zs-Qm4" id="ODa-nq-zfb"/>
+                        <outlet property="replayButtonOutlet" destination="cG4-HO-3Il" id="haR-ZC-gAm"/>
+                        <outlet property="userGuessLabelOutlet" destination="JcZ-KK-g8M" id="t75-sJ-vo5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="-353"/>
+        </scene>
+        <!--Guess Input View Controller-->
+        <scene sceneID="RNM-ru-juc">
+            <objects>
+                <viewController id="skh-6C-s1R" customClass="GuessInputViewController" customModule="Protocol_Delegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hPp-OK-y8e"/>
+                        <viewControllerLayoutGuide type="bottom" id="eE8-t0-TNT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="26h-zn-qLt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a guess" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEu-Ea-dcN">
+                                <rect key="frame" x="20" y="128" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="S0o-jo-ega"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number between 0 ~ 100" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dLJ-OC-mBl">
+                                <rect key="frame" x="70" y="213" width="460" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eCM-U9-LVV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBJ-Rm-F2t">
+                                <rect key="frame" x="261" y="285" width="78" height="30"/>
+                                <state key="normal" title="Save guess"/>
+                                <connections>
+                                    <action selector="saveGuessAction:" destination="skh-6C-s1R" eventType="touchUpInside" id="13T-zb-NiO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cBJ-Rm-F2t" firstAttribute="centerX" secondItem="dLJ-OC-mBl" secondAttribute="centerX" id="0eZ-Kg-wiP"/>
+                            <constraint firstItem="YEu-Ea-dcN" firstAttribute="top" secondItem="hPp-OK-y8e" secondAttribute="bottom" constant="64" id="2zV-gN-M74"/>
+                            <constraint firstItem="YEu-Ea-dcN" firstAttribute="trailing" secondItem="26h-zn-qLt" secondAttribute="trailingMargin" id="ADm-FD-RM4"/>
+                            <constraint firstItem="dLJ-OC-mBl" firstAttribute="top" secondItem="YEu-Ea-dcN" secondAttribute="bottom" constant="64" id="O3r-5i-vyZ"/>
+                            <constraint firstItem="cBJ-Rm-F2t" firstAttribute="centerY" secondItem="26h-zn-qLt" secondAttribute="centerY" id="aB4-CU-Mzo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dLJ-OC-mBl" secondAttribute="trailing" constant="50" id="kiu-R5-xS7"/>
+                            <constraint firstItem="YEu-Ea-dcN" firstAttribute="leading" secondItem="26h-zn-qLt" secondAttribute="leadingMargin" id="m9l-YK-fvF"/>
+                            <constraint firstItem="dLJ-OC-mBl" firstAttribute="leading" secondItem="26h-zn-qLt" secondAttribute="leadingMargin" constant="50" id="n7f-Hy-b9l"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="guessLabelOutlet" destination="YEu-Ea-dcN" id="gEC-IG-VDR"/>
+                        <outlet property="guessTextFieldOutlet" destination="dLJ-OC-mBl" id="rEU-GI-5iM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L5X-Fd-esq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="-353"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wSr-AK-gbG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YkA-IV-bDg" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BgQ-b9-p1q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wy6-kM-BKr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLf-gR-6KD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="358" y="-353"/>
+        </scene>
+    </scenes>
+</document>
